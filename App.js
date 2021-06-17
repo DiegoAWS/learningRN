@@ -1,12 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import {  Image, StyleSheet, Text, View } from 'react-native';
+import CustomButton from './Button'
+import logo from './assets/logo.jpg';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* <Image source={{ uri: "https://i.imgur.com/TkIrScD.png" }} style={{ width: 305, height: 159 }} /> */}
+      <Image source={logo} style={{ width: '100%', height: 159 }} />
+      <Text style={{color: '#888', fontSize: 18, marginTop:30}}> 
+       Pick a picture
+      </Text>
+     <CustomButton />
     </View>
   );
 }
